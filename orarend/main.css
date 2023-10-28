@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Anton&display=swap');
+
+:root {
+  --v-color: #6C3483;
+  --v-white: #ece8e1;
+  --v-black: #0F0B21;
+  --v-outline: rgba(236, 232, 225, .5);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 10px;
+  margin: 0;
+  color: var(--v-white);
+  background-color: var(--v-black);
+  text-rendering: optimizeLegibility;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('../assets/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px;
+  width: 95%;
+}
+
+.block {
+  position: relative;
+  overflow: hidden;
+  max-width: 100vw;
+}
+
+.scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+td {
+  width: calc(100% / 8);
+  height: 105px;
+  padding: 2px;
+}
+
+.class {
+    width: 200px;
+    height: 50px;
+    background-color: var(--v-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.classIndex {
+  font-family: 'Alatsi', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.profileName {
+  font-family: 'Alatsi', sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+.classDuration {
+  font-family: 'Alatsi', sans-serif;
+  font-size: 10px;
+  text-align: center;
+}
+
+.top {
+  height: 50%;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: var(--v-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+
+.left {
+  width: 200px;
+  height: 100px;
+  background-color: var(--v-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Alatsi', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.profile {
+  width: 200px;
+  height: 50px;
+  background-color: var(--v-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.profilePicture {
+  width: 24px;
+  height: 24px;
+  margin-right: 7px;
+  border-radius: 50%;
+}
+
+.titleBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 30px;
+  z-index: 2;
+}
+
+.title {
+  font-family: 'Anton', sans-serif;
+  font-size: 80px;
+  margin: 15px;
+  border-bottom: var(--v-color) solid 2px;
+  color: var(--v-white);
+  text-transform: uppercase;
+}
+
+.description {
+  font-family: 'Alatsi', sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  margin: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--v-black);
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--v-color); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--v-color); 
+}
+

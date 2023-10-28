@@ -1,0 +1,184 @@
+button {
+  font-family: 'Alatsi', sans-serif;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.7rem;
+  text-transform: uppercase;
+  color: var(--v-white);
+  border: 0;
+  background-color: transparent;
+}
+
+button:hover {
+  color: var(--v-white);
+}
+
+button::before, button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(50% - 0.4rem);
+  border: 1px solid var(--v-outline);
+  background-color: transparent;
+}
+
+button::before {
+  top: 0;
+  border-bottom: 0;
+}
+
+button::after {
+  bottom: 0;
+  border-top: 0;
+}
+
+.hoverEffect {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -5%;
+  width: 110%;
+  height: 100%;
+  content: '';
+  transition: transform .3s ease-out;
+  transform: translateX(-100%) skew(-10deg);
+  background-color: var(--v-color);
+}
+
+button:hover .hoverEffect {
+  transform: translateX(0) skew(-10deg);
+}
+
+.image {
+  padding: 1px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 2;
+  left: 2;
+  display: block;
+  padding: 2px;
+  transition: z-index 0.1s ease-in;
+  z-index: 2;
+}
+
+button:hover .image {
+  display: none;
+  z-index: -1;
+  transition: z-index 0.1s ease-out;
+}
+
+.hover {
+  display: none;
+  z-index: -1;
+  transition: z-index 0.1s ease-out;
+}
+
+button:hover .hover {
+  padding: 1px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 2;
+  left: 2;
+  display: block;
+  padding: 2px;
+  transition: z-index 0.1s ease-in;
+  z-index: 2;
+}
+
+
+.label {
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  height: 100%;
+}
+
+.subject {
+  position: relative;
+  z-index: 1;
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 300;
+  height: 50%;
+  padding: 4%;
+}
+
+.teacher {
+  position: relative;
+  z-index: 1;
+  display: block;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding-left: 4%;
+  padding-top: 4%;
+  height: 25%;
+}
+
+.classroom {
+  position: relative;
+  z-index: 1;
+  display: block;
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding-bottom: 4%;
+  padding-right: 4%;
+  height: 25%;
+}
+
+.label:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+}
+
+.primary .label::before {
+  background-color: var(--v-white);
+}
+
+.primary {
+  color: var(--v-black);
+}
+
+.outline {
+  color: var(--v-white);
+}
+
+button:hover .label-text::after{
+  color: var(--v-black);
+}
+
+.outline .label::before, .outline .label::after {
+  border: 1px solid var(--v-outline);
+}
+
+.outline+.red {
+  color: var(--v-color);
+}
+
+.outline+.red:hover {
+  color: var(--v-white);
+}
+
+.outline+.red .label::before, .outline+.red .label::after {
+  border-color: var(--v-color);
+}
+
+.examLink {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  left: 0;
+  top: 0
+}
